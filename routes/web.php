@@ -21,9 +21,11 @@ Route::resource('articles','ArticlesController');
 Route::get('young/{age}','UserController@young')->middleware("checkage");
 
 
-Route::get('/',function() {
-	return view('greet',['name'=>'James']);
-});
+Route::get('signup','UsersController@create')->name('signup');
+
+// Route::get('/',function() {
+// 	return view('greet',['name'=>'James']);
+// });
 
 // Route::get('home',function() {
 // 	return response('Hello World',200)
@@ -60,9 +62,10 @@ Route::get('/',function() {
 
 // Route::get('young/{age}','UserController@young')->middleware("young");
 
-// Route::get('/','StaticPagesController@home')->name('home');
+Route::get('/','StaticPagesController@home')->name('home');
 
-// Route::get('about','StaticPagesController@about')->name('about');
+Route::get('about','StaticPagesController@about')->name('about');
+Route::get('help','StaticPagesController@help')->name('help');
 
 // Route::get('/help',function() {
 // 	return url('foo');
