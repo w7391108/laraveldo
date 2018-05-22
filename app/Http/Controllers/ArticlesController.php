@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Requests\StoreBlogPost;
 use Illuminate\Support\Facades\Auth;

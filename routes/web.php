@@ -17,11 +17,18 @@ Route::get('welcome', function () {
 
 Route::resource('articles','ArticlesController');
 
+Route::resource('users','UsersController');
+
 
 Route::get('young/{age}','UserController@young')->middleware("checkage");
 
 
 Route::get('signup','UsersController@create')->name('signup');
+
+Route::get('login','SessionsController@create')->name('login');
+Route::post('login','SessionsController@store')->name('login');
+
+Route::delete('logout','SessionsController@destory')->name('logout');
 
 // Route::get('/',function() {
 // 	return view('greet',['name'=>'James']);
@@ -93,7 +100,7 @@ Route::get('help','StaticPagesController@help')->name('help');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
+// 
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

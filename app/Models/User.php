@@ -19,7 +19,7 @@ class User extends Authenticatable
      */
     //只有在该属性值范围的字段才能被更新
     protected $fillable = [
-        'name', 'age','isDeleted'
+        'name','email','password'
     ];
 
     /**
@@ -28,6 +28,5 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'sex',
     ];
 }

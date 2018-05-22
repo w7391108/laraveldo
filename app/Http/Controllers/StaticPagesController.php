@@ -9,6 +9,8 @@ class StaticPagesController extends Controller
     //
     public function home()
     {
+        $res = \App\Models\User::all();
+        var_dump($res);die();
     	return view('static_pages/home');
     }
 
